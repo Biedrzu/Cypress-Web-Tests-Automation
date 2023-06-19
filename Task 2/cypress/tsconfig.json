@@ -8,7 +8,11 @@
         "types": [
             "cypress",
             "node"
-        ]
+        ],
+        "baseUrl": "..",
+        "paths": {
+            "@support/*": ["cypress/support/*"],
+        }
     },
     "include": [
         "**/*.ts"
