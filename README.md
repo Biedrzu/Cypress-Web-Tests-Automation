@@ -8,11 +8,16 @@ https://github.com/Biedrzu/LeapDev-Quality-Engineer-Task
 Task 1 is for manual testing
 
 Task 2 is for Web UI Automation:
-run console in the main for folder (LeapDev-Quality-Engineer-Task) and install type script latest version (5.1.3):
+To easiest way tp run this tests is to:
+1) navigate to /LeapDev-Quality-Engineer-Task/Task 2
+2) install type script latest version (5.1.3):
 npm install --save-dev typescript
 
-install cypress latest version (12.14.0):
+3) install cypress latest version (12.14.0):
 npm install cypress --save-dev
+
+4) from the same location open cypress dashboard:
+npx cypress open
 
 # Project Structure
 
