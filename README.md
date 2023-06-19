@@ -8,7 +8,7 @@ https://github.com/Biedrzu/LeapDev-Quality-Engineer-Task
 Task 1 is for manual testing
 
 Task 2 is for Web UI Automation:
-To easiest way tp run this tests is to:
+To easiest way to run this tests is to:
 1) navigate to /LeapDev-Quality-Engineer-Task/Task 2
 2) install type script latest version (5.1.3):
 npm install --save-dev typescript
