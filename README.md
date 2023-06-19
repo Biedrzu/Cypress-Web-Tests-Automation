@@ -20,6 +20,14 @@ npm install cypress --save-dev
 npx cypress open
 
 # Project Structure
+cypress/e2e - all executable tests
+cypress/support/helper - method for various components
+cypress/support/selectors - selectors for various components
+cypress/support/commands.ts - commands that the can be used for the whole project
+cypress/support/e2e.js - executed before each test
+cypress/tsconfig.json - config file
+cypress.config.ts - config file
+
 
 # Additional info
 1. When entering https://demoqa.com/books there is an error visible in the console: 
