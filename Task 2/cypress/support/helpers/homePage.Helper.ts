@@ -104,13 +104,27 @@ export const getRandomBook = () => {
 }
 
 export const openBook = (randomIndex: number) => {
-    return cy.get(homePageSelectors.reactTable).find(homePageSelectors.aTag).eq(randomIndex).then((bookLink) => {   
+    return cy.get(homePageSelectors.reactTable).find(homePageSelectors.aTag).eq(randomIndex).then((bookLink) => {
         cy.wrap(bookLink).invoke('attr', 'href').then(href => {
             cy.wrap(bookLink).click();
             const bookId: string = href.slice(12);
-            
-            
+
+
             return bookId
         })
     })
+}
+
+export const openRandomBookAndGetBackToStore = () => {
+    getRandomBook().then(randomIndex => {
+        cy.get(homePageSelectors.reactTable).find(homePageSelectors.aTag).eq(randomIndex).then((bookLink) => {
+            cy.wrap(bookLink).invoke('attr', 'href').then(href => {
+                const bookId = href.slice(12);
+                cy.wrap(bookLink).click();
+                cy.url().should('include', bookId);
+                cy.contains('Back To Book Store').click();
+                cy.url().should('equal', Cypress.config().baseUrl + '/')
+            });
+        });
+    });
 }

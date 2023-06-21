@@ -12,7 +12,7 @@ In those tests I only mention what requests are being sent as responses status m
 
 I decided to skip integration testing as in this case it will be hard to verify any two components without the third one.
 Also skipped acceptance testing. All main functionalities are covered in system testing. To create some reliable acceptance tests I would need more details
-about what is expected from this system.
+about what is expected from this application.
 
 # Task 2 is for Web UI Automation:
 ## Prepare environment:
@@ -72,3 +72,6 @@ Not sure if it is desired solution but I believe if we want to cover adverts tes
 we should cover it in different test suite.
 
 4. Tests for table sorting by titles fail as I would expect the table to be sorted alphabetically by their title and they are not.
+
+5. I should also add rows and page checking but I honestly didn't have enough time to do it. I believe the cases I 
+provided should be enough to presents my skills in automation.
