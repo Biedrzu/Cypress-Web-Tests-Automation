@@ -5,21 +5,46 @@ author: Bogusz Biedrzycki
 Download or clone the repo from:
 https://github.com/Biedrzu/LeapDev-Quality-Engineer-Task
 
-Task 1 is for manual testing
+# Task 1 is for manual testing
+I decided to split test scenarios into component testing (Login, Book Store and Profile) and system testing.
+Component testing does not  require other components to work or may require some some basic mocks from other components.
+In those tests I only mention what requests are being sent and responses status depend on ther components (are verified in system testing).
 
-Task 2 is for Web UI Automation:
-To easiest way to run this tests is to:
-1) navigate to /LeapDev-Quality-Engineer-Task/Task 2
+I decided to skip integration testing as in this case it will be hard to verify any two components without the third one.
+
+# Task 2 is for Web UI Automation:
+## Prepare environment:
+1) navigate to 
+```javascript
+/'Task 2'
+```
 2) install type script latest version (5.1.3):
+```javascript
 npm install --save-dev typescript
+```
 
 3) install cypress latest version (12.14.0):
+```javascript
 npm install cypress --save-dev
+```
 
-4) from the same location open cypress dashboard:
+## Running tests:
+1) Run tests from command line:
+```javascript
+npx cypress run
+```
+All the results will be visible in the command line
+
+or
+
+2) from the same location open cypress dashboard:
+```javascript
 npx cypress open
+```
+and run the test you want
 
-# Project Structure
+
+## Project Structure
 cypress/e2e - all executable tests
 cypress/support/helper - method for various components
 cypress/support/selectors - selectors for various components
