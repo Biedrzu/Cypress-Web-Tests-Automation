@@ -7,10 +7,11 @@ https://github.com/Biedrzu/LeapDev-Quality-Engineer-Task
 
 # Task 1 is for manual testing
 I decided to split test scenarios into component testing (Login, Book Store and Profile) and system testing.
-Component testing does not  require other components to work or may require some some basic mocks from other components.
-In those tests I only mention what requests are being sent and responses status depend on ther components (are verified in system testing).
+Component testing does not  require other components to work or may require only some some basic mocks from other components.
+In those tests I only mention what requests are being sent as responses status may depend on ther components (they are verified in system testing).
 
 I decided to skip integration testing as in this case it will be hard to verify any two components without the third one.
+Also skipped acceptance testing. All main functionalities are covered in system testing. To order some reliable acceptance tests I would need more details.
 
 # Task 2 is for Web UI Automation:
 ## Prepare environment:
@@ -58,12 +59,14 @@ cypress.config.ts - config file
 
 
 # Additional info
-1. When entering https://demoqa.com/books there is an error visible in the console: 
+1. I decided to write those tests without Classes as I believe it is not required in such cases.
+
+2. When entering https://demoqa.com/books there is an error visible in the console: 
 "Uncaught TypeError: g(...).setup is not a function" which causes Cypress to automatically fail
-For purpose of this test I changed config in support/e2e.js to skip this verification
+For purpose of this test I changed config in support/e2e.js to skip this verification.
 
-2. Blocked googleads by adding blockHosts: "*.googletagservices.com", into cypress.config.ts
+3. Blocked googleads by adding blockHosts: "*.googletagservices.com", into cypress.config.ts
 Not sure if it is desired solution but I believe if we want to cover adverts tests on this page
-we should cover it in different test suite
+we should cover it in different test suite.
 
-
+4. Tests for table sorting by titles fail as I would expect the table to be sorted alphabetically by their title and they are not.
