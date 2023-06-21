@@ -11,7 +11,8 @@ Component testing does not  require other components to work or may require only
 In those tests I only mention what requests are being sent as responses status may depend on ther components (they are verified in system testing).
 
 I decided to skip integration testing as in this case it will be hard to verify any two components without the third one.
-Also skipped acceptance testing. All main functionalities are covered in system testing. To order some reliable acceptance tests I would need more details.
+Also skipped acceptance testing. All main functionalities are covered in system testing. To create some reliable acceptance tests I would need more details
+about what is expected from this system.
 
 # Task 2 is for Web UI Automation:
 ## Prepare environment:
@@ -37,6 +38,7 @@ npx cypress run
 ```
 
 2) From the same location open cypress dashboard and run the test you want to see.
+Running the tests from dashboard provides more details.
 ```javascript
 npx cypress open
 ```
