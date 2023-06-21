@@ -29,28 +29,31 @@ npm install cypress --save-dev
 ```
 
 ## Running tests:
-1) Run tests from command line:
+1) Run tests from command line.
+All the results will be visible in the command line.
 ```javascript
 npx cypress run
 ```
-All the results will be visible in the command line
 
-or
-
-2) from the same location open cypress dashboard:
+2) From the same location open cypress dashboard and run the test you want to see.
 ```javascript
 npx cypress open
 ```
-and run the test you want
 
 
 ## Project Structure
 cypress/e2e - all executable tests
+
 cypress/support/helper - method for various components
+
 cypress/support/selectors - selectors for various components
+
 cypress/support/commands.ts - commands that the can be used for the whole project
+
 cypress/support/e2e.js - executed before each test
+
 cypress/tsconfig.json - config file
+
 cypress.config.ts - config file
 
 
