@@ -8,13 +8,26 @@ https://github.com/Biedrzu/LeapDev-Quality-Engineer-Task
 Task 1 is for manual testing
 
 Task 2 is for Web UI Automation:
-run console in the main for folder (LeapDev-Quality-Engineer-Task) and install type script latest version (5.1.3):
+To easiest way to run this tests is to:
+1) navigate to /LeapDev-Quality-Engineer-Task/Task 2
+2) install type script latest version (5.1.3):
 npm install --save-dev typescript
 
-install cypress latest version (12.14.0):
+3) install cypress latest version (12.14.0):
 npm install cypress --save-dev
 
+4) from the same location open cypress dashboard:
+npx cypress open
+
 # Project Structure
+cypress/e2e - all executable tests
+cypress/support/helper - method for various components
+cypress/support/selectors - selectors for various components
+cypress/support/commands.ts - commands that the can be used for the whole project
+cypress/support/e2e.js - executed before each test
+cypress/tsconfig.json - config file
+cypress.config.ts - config file
+
 
 # Additional info
 1. When entering https://demoqa.com/books there is an error visible in the console: 
