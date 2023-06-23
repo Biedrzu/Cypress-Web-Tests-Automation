@@ -16,6 +16,7 @@ about what is expected from this application.
 
 # Task 2 is for Web UI Automation:
 ## Prepare environment:
+note: I use git bash to run all the commands
 1) navigate to 
 ```javascript
 /'Task 2'
@@ -65,8 +66,8 @@ cypress.config.ts - config file
 1. I decided to write those tests without Classes as I believe it is not required in such cases.
 
 2. When entering https://demoqa.com/books there is an error visible in the console: 
-"Uncaught TypeError: g(...).setup is not a function" which causes Cypress to automatically fail
-For purpose of this test I changed config in support/e2e.js to skip this verification.
+"Uncaught TypeError: g(...).setup is not a function" which causes Cypress to automatically fail.
+For this reason I changed config in support/e2e.js to skip this verification.
 
 3. Blocked googleads by adding blockHosts: "*.googletagservices.com", into cypress.config.ts
 Not sure if it is desired solution but I believe if we want to cover adverts tests on this page
