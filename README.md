@@ -33,10 +33,10 @@ npm install cypress --save-dev
 
 ## Running tests:
 1) Run tests from command line:
-All the results will be visible in the command line.
 ```javascript
 npx cypress run
 ```
+The results will be visible in the command line.
 
 2) Use Cypress dashboard:
 ```javascript
@@ -63,7 +63,7 @@ cypress.config.ts - config file
 
 
 # Additional info
-1. I decided to write those tests without Classes as I believe it is not beneficial in such cases.
+1. I decided to write those tests without Classes as I believe it is not necesearry in such cases.
 
 2. When entering https://demoqa.com/books there is an error visible in the console: 
 "Uncaught TypeError: g(...).setup is not a function" which causes Cypress to automatically fail.
