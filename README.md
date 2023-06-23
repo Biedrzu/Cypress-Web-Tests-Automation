@@ -19,14 +19,14 @@ about what is expected from this application.
 note: I use git bash to run all the commands
 1) navigate to 
 ```javascript
-/'Task 2'
+/Task2
 ```
 2) install type script latest version (5.1.3):
 ```javascript
 npm install --save-dev typescript
 ```
 
-3) install cypress latest version (12.14.0):
+3) install cypress latest version (12.15.0):
 ```javascript
 npm install cypress --save-dev
 ```
@@ -74,6 +74,3 @@ Not sure if it is desired solution but I believe if we want to cover adverts tes
 we should cover it in different test suite.
 
 4. Tests for table sorting by titles fail as I would expect the table to be sorted alphabetically by their title and they are not.
-
-5. I should also add rows and page checking but I honestly didn't have enough time to do it. I believe the cases I 
-provided should be enough to presents my skills in automation.
