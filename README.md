@@ -63,7 +63,8 @@ cypress.config.ts - config file
 
 
 # Additional info
-1. I decided to write those tests without Classes as I believe it is not necessary in such cases.
+1. I decided to write those tests without Classes as I believe using modules can be more transparent
+when writing tests in JS/TS.
 
 2. When entering https://demoqa.com/books there is an error visible in the console: 
 "Uncaught TypeError: g(...).setup is not a function" which causes Cypress to automatically fail.
