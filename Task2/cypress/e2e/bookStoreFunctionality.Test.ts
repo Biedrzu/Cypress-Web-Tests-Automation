@@ -1,8 +1,8 @@
 import { homePageSelectors } from "@support/selectors/homePage.Selectors";
-import { openRandomBookAndGetBackToStore, rowManipulationTest, pageNumberManipulation } from "@support/helpers/homePage.Helper";
+import { openRandomBookAndGetBackToStore, rowManipulationTest, pageNumberManipulation, searchTest } from "@support/helpers/homePage.Helper";
 import { bookStoreLeftPanelTest } from "@support/helpers/leftPanel.Helper";
 
-context('Book Store Functionality Tests', () => {
+context('Book store functionality tests', () => {
     beforeEach(() => {
         cy.visit('/');
     });
@@ -21,6 +21,11 @@ context('Book Store Functionality Tests', () => {
         });
     });
 
+    it('Search test', () => {
+        const seachQuery: string = 'JavaScript';
+        searchTest(seachQuery);
+    });
+
     it('Check that random book is opened correctly and back to home page', () => {
         openRandomBookAndGetBackToStore();
     });
@@ -29,7 +34,7 @@ context('Book Store Functionality Tests', () => {
         rowManipulationTest();
     });
 
-    it.only('Check page manipulation', () => {
+    it('Check page manipulation', () => {
         pageNumberManipulation();
     });
 });

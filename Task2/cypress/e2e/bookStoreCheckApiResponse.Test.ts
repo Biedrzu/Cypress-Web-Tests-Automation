@@ -7,7 +7,7 @@ context('API response test', () => {
     });
 
     it('Check API response with books', () => {
-        const alias: string = '@getBooks'
+        const alias: string = '@getBooks';
         checkApiResponseTest(alias);
     });
 });

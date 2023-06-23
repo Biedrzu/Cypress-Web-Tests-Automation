@@ -95,24 +95,12 @@ export const searchTest = (searchQuery: string) => {
     });
 }
 
-export const getRandomBook = () => {
+const getRandomBook = () => {
     return cy.get(homePageSelectors.tBody).find(homePageSelectors.tRow).not('.-padRow').then((booksFound) => {
         let numOfBooks: number = booksFound.length
         let randomIndex: number = Math.floor(Math.random() * numOfBooks)
         return randomIndex
     });
-}
-
-export const openBook = (randomIndex: number) => {
-    return cy.get(homePageSelectors.reactTable).find(homePageSelectors.aTag).eq(randomIndex).then((bookLink) => {
-        cy.wrap(bookLink).invoke('attr', 'href').then(href => {
-            cy.wrap(bookLink).click();
-            const bookId: string = href.slice(12);
-
-
-            return bookId
-        })
-    })
 }
 
 export const openRandomBookAndGetBackToStore = () => {
