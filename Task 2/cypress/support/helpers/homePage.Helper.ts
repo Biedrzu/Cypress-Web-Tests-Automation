@@ -128,3 +128,17 @@ export const openRandomBookAndGetBackToStore = () => {
         });
     });
 }
+
+export const rowManipulationTest = () => {
+    cy.get(homePageSelectors.paginationBottom).find(homePageSelectors.rowsPerPage).should('contain', '10 rows');
+    cy.get(homePageSelectors.rowsPerPage).then(dropdown => {
+        cy.wrap(dropdown).find(homePageSelectors.optionTag).each(option => {
+            const itemtext = option.text()
+            cy.wrap(option).invoke('attr', 'value').then(value => {
+                const valueNumber = Number(value)
+                cy.get(homePageSelectors.rowsPerPage).select(itemtext, { force: true }).should('contain', itemtext)
+                cy.get(homePageSelectors.tGroup).should('have.length', valueNumber)
+            });
+        });
+    });
+}

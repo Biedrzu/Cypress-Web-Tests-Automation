@@ -38,6 +38,7 @@ npx cypress run
 ```
 
 2) From the same location open cypress dashboard and run the test you want to see.
+Open E2E testing (I run those tests only on Chrome browser).
 Running the tests from dashboard provides more details.
 ```javascript
 npx cypress open

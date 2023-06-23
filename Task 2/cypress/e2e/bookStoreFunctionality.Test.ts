@@ -1,5 +1,5 @@
 import { homePageSelectors } from "@support/selectors/homePage.Selectors";
-import { getRandomBook, openRandomBookAndGetBackToStore } from "@support/helpers/homePage.Helper";
+import { openRandomBookAndGetBackToStore, rowManipulationTest } from "@support/helpers/homePage.Helper";
 import { bookStoreLeftPanelTest } from "@support/helpers/leftPanel.Helper";
 
 context('Book Store Functionality Tests', () => {
@@ -23,5 +23,9 @@ context('Book Store Functionality Tests', () => {
 
     it('Check that random book is opened correctly and back to home page', () => {
         openRandomBookAndGetBackToStore();
+    });
+
+    it('Check row manipulation', () => {
+        rowManipulationTest();
     });
 });
