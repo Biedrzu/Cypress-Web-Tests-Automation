@@ -29,20 +29,20 @@ const getTitles = () => {
 
 export const checkSortingByTitlesAsc = () => {
     getTitles().then(initialTitles => {
-        let sortedTitles = initialTitles.sort().toString();
+        let sortedTitles = initialTitles.sort().join(' || ');
         sortTableByColumnAsc(1);
         getTitles().then(actualTitles => {
-            expect(sortedTitles).to.equal(actualTitles.toString());
+            expect(sortedTitles).to.equal(actualTitles.join(' || '));
         });
     });
 }
 
 export const checkSortingByTitlesDesc = () => {
     getTitles().then(initialTitles => {
-        let sortedTitles = initialTitles.sort().reverse().toString();
+        let sortedTitles = initialTitles.sort().reverse().join(' || ');
         sortTableByColumnDesc(1);
         getTitles().then(actualTitles => {
-            expect(sortedTitles).to.equal(actualTitles.toString());
+            expect(sortedTitles).to.equal(actualTitles.join(' || '));
         });
     });
 }
