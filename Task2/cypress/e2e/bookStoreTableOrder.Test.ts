@@ -5,6 +5,10 @@ context('Book store table sorting', () => {
         cy.visit('/');
     });
 
+    it('Check sorting by isbn ascending', () => {
+        homePageHelper.checkSortingByIsbnAsc();
+    });
+
     it('Check sorting by titles ascending', () => {
         homePageHelper.checkSortingByTitlesAsc();
     });

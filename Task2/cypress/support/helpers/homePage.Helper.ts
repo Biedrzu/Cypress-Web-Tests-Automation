@@ -27,6 +27,31 @@ const getTitles = () => {
     });
 }
 
+const getIsbns = () => {
+    let titles: number[] = [];
+
+    return cy.get(homePageSelectors.tBody).find(homePageSelectors.aTag).each(a => {
+        cy.wrap(a).invoke('attr', 'href').then(text => {
+            titles.push(Number(text.slice(12)));
+        })
+    }).then(() => {
+        return titles;
+    });
+}
+
+export const checkSortingByIsbnAsc = () => {
+    getIsbns().then(initialIsbns => {
+        
+        let sortedIsbns = initialIsbns.sort().join(' || ');
+        sortTableByColumnAsc(1);
+        getIsbns().then(actualIsbns => {
+            console.log(sortedIsbns);
+            console.log(actualIsbns.join(' || '));
+            expect(sortedIsbns).to.equal(actualIsbns.join(' || '));
+        });
+    });
+}
+
 export const checkSortingByTitlesAsc = () => {
     getTitles().then(initialTitles => {
         let sortedTitles = initialTitles.sort().join(' || ');
