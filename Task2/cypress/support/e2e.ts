@@ -1,4 +1,4 @@
-import './commands';
+import '@support/commands';
 
 Cypress.on('uncaught:exception', () => {
     // https://docs.cypress.io/guides/references/error-messages#Uncaught-exceptions-from-your-application

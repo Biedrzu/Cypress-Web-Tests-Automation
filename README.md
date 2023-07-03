@@ -8,7 +8,7 @@ https://github.com/Biedrzu/LeapDev-Quality-Engineer-Task
 # Task 1 is for manual testing
 I was not sure how to approach this task to do it in a efficient way but
 I decided to split test scenarios into component testing (Login, Book Store and Profile) and system testing.
-Component testing does not  require other components to work or may require only some basic mocks from other components.
+Component testing does not  require other components to work or may require only some basic mocks from them.
 
 I decided to skip integration testing as in this case it will be hard to verify any two components without the third one.
 Also skipped acceptance testing. All main functionalities are covered in system testing. To create some reliable acceptance tests I would need more details
@@ -21,12 +21,12 @@ note: I use git bash to run all the commands
 ```javascript
 /Task2
 ```
-2) install type script latest version (5.1.3):
+2) install TypeScript latest version (5.1.3):
 ```javascript
 npm install --save-dev typescript
 ```
 
-3) install cypress latest version (12.15.0):
+3) install Cypress latest version (12.15.0):
 ```javascript
 npm install cypress --save-dev
 ```
@@ -43,23 +43,23 @@ The results will be visible in the command line.
 npx cypress open
 ```
 When dashboard opens choose E2E Testing and then Chrome browser.
-All tests should be visible in the spec.
+All tests should be visible in the spec
 
 
 ## Project Structure
-cypress/e2e - all executable tests
+cypress/e2e - all executable tests; with .Test.ts file extension
 
-cypress/support/helper - method for various components
+cypress/support/helpers - methods for various components/functions
 
 cypress/support/selectors - selectors for various components
 
-cypress/support/commands.ts - commands that the can be used for the whole project
+cypress/support/commands.ts - commands that the can be used within the whole project
 
-cypress/support/e2e.js - executed before each test
+cypress/support/e2e.ts - executed before each test
 
-cypress/tsconfig.json - config file
+cypress/tsconfig.json - config file; contains aliases
 
-cypress.config.ts - config file
+cypress.config.ts - config file; contains specpattern, basic url and viewport
 
 
 # Additional info
