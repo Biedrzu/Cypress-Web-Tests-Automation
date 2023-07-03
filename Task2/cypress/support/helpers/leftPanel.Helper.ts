@@ -1,4 +1,4 @@
-import { leftPanelSelectors } from "../selectors/leftPanel.Selectors";
+import { leftPanelSelectors } from "@support/selectors/leftPanel.Selectors";
 
 const bookStoreSectionName: string = 'Book Store Application';
 
@@ -6,6 +6,8 @@ const checkBookStoreIsExpanded = () => {
     cy.get(`${leftPanelSelectors.accordion} ${leftPanelSelectors.elementGroup}`).eq(5).then(bookStoreGroup => {
         cy.wrap(bookStoreGroup).find(leftPanelSelectors.headerRight).find('path').eq(1).invoke('attr', 'd').then(dValue => {
             expect(dValue).to.contain('5.83z');
+            // would be better to add a specific class / dataTestId on transformed icon
+            // or to check <div class="icon" style=transform: rotate(180deg)>
         });
         cy.wrap(bookStoreGroup).find(leftPanelSelectors.elementList).should('have.class', 'show');
     });

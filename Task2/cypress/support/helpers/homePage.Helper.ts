@@ -61,20 +61,20 @@ const getValueOfTableColumns = (index: number) => {
 
 export const checkSortingByColumnAsc = (index: number) => {
     getValueOfTableColumns(index).then(initialValues => {
-        let sortedValues = initialValues.sort().toString();
+        let sortedValues = initialValues.sort().join(' || ');
         sortTableByColumnAsc(index);
         getValueOfTableColumns(index).then(actualValues => {
-            expect(sortedValues).to.equal(actualValues.toString());
+            expect(sortedValues).to.equal(actualValues.join(' || '));
         });
     });
 }
 
 export const checkSortingByColumnDesc = (index: number) => {
     getValueOfTableColumns(index).then(initialValues => {
-        let sortedValues = initialValues.sort().reverse().toString();
+        let sortedValues = initialValues.sort().reverse().join(' || ');
         sortTableByColumnDesc(index);
         getValueOfTableColumns(index).then(actualValues => {
-            expect(sortedValues).to.equal(actualValues.toString());
+            expect(sortedValues).to.equal(actualValues.join(' || '));
         });
     });
 }

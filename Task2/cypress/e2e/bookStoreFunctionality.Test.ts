@@ -4,6 +4,15 @@ import { bookStoreLeftPanelTest } from "@support/helpers/leftPanel.Helper";
 
 context('Book store functionality tests', () => {
     beforeEach(() => {
+
+        // this would be a better solution then skipping all uncaught: exception in e2e.js file
+        // but cannot put it there; must be within context or it
+        
+        // https://filiphric.com/how-to-wait-for-page-to-load-in-cypress
+        // cy.intercept('**/adplus.js', {
+        //     body: undefined
+        // })
+
         cy.visit('/');
     });
 
