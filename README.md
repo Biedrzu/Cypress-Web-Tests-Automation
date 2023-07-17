@@ -1,21 +1,19 @@
-# LeapDev-Quality-Engineer-Technical-Test
+# Web Testing
 author: Bogusz Biedrzycki
 
-# Requirements
+## Requirements
 Download or clone the repo from:
 https://github.com/Biedrzu/LeapDev-Quality-Engineer-Task
 
-# Task 1 is for manual testing
-I was not sure how to approach this task to do it in a efficient way but
-I decided to split test scenarios into component testing (Login, Book Store and Profile) and system testing.
-Component testing does not  require other components to work or may require only some basic mocks from them.
+## Task 1 Manual Testing
+This task refers to this website: https://demoqa.com/login
 
+Test cases in descriptive language, which test the Book Store Application pages of the above site as thoroughly as possible.
+They cover the Login, Book Store and Profile sections of this application.
 I decided to skip integration testing as in this case it will be hard to verify any two components without the third one.
-Also skipped acceptance testing. All main functionalities are covered in system testing. To create some reliable acceptance tests I would need more details
-about what is expected from this application.
 
-# Task 2 is for Web UI Automation:
-## Prepare environment:
+## Task 2 Automated Testing using Cypress
+### Prepare environment:
 note: I use git bash to run all the commands
 1) navigate to 
 ```javascript
@@ -46,7 +44,7 @@ When dashboard opens choose E2E Testing and then Chrome browser.
 All tests should be visible in the spec
 
 
-## Project Structure
+### Project Structure
 cypress/e2e - all executable tests; with .Test.ts file extension
 
 cypress/support/helpers - methods for various components/functions
@@ -62,7 +60,7 @@ cypress/tsconfig.json - config file; contains aliases
 cypress.config.ts - config file; contains specpattern, basic url and viewport
 
 
-# Additional info
+## Additional info
 1. I decided to write those tests without Classes as I believe using modules can be more transparent
 when writing tests in JS/TS.
 
