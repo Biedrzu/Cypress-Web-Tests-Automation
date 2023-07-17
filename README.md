@@ -13,6 +13,10 @@ They cover the Login, Book Store and Profile sections of this application.
 I decided to skip integration testing as in this case it will be hard to verify any two components without the third one.
 
 ## Task 2 Automated Testing using Cypress
+This task refers to the mini Book Store website: https://demoqa.com/books
+
+Automation scripts which test the mini Book Store pages of the above site as thoroughly as possible.
+
 ### Prepare environment:
 note: I use git bash to run all the commands
 1) navigate to 
